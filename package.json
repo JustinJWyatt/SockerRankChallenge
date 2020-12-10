@@ -1,0 +1,25 @@
+{
+  "name": "sockerrankchallenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinJWyatt/SockerRankChallenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustinJWyatt/SockerRankChallenge/issues"
+  },
+  "homepage": "https://github.com/JustinJWyatt/SockerRankChallenge#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "line-reader": "^0.4.0"
+  }
+}

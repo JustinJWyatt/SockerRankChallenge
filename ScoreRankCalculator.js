@@ -35,7 +35,7 @@ const ScoreRankCalculator = function(fileName) {
                     if (last) {
                         scores.sort((a, b) => b.points - a.points || a.team.localeCompare(b.team));
                         scores.map((score, index, arr) => {
-                            score.rank = index + 1;
+                            score.rank = ++index;
                             const draw = arr.find(y => y.points === score.points);
                             if (draw) score.rank = draw.rank;
                             rankings.push(`${score.rank}. ${score.team} ${score.points}`);

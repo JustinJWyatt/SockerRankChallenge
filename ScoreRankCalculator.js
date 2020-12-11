@@ -25,17 +25,17 @@ const ScoreRankCalculator = function(fileName) {
                 if (+firstScore === +secondScore) {
                     scores[firstIndex].points += 1;
                     scores[secondIndex].points += 1;
-                } 
-                else if (+firstScore > +secondScore) 
-                    scores[firstIndex].points += 3;
-                else
-                    scores[secondIndex].points += 3;
+                }
+                else {
+                    scores[+firstScore > +secondScore ? firstIndex : secondIndex].points += 3;
+                }
+
                 if (last) {
                     scores.sort((a, b) => b.points - a.points || a.team.localeCompare(b.team));
                     scores.map((x, i, arr) => {
                         x.rank = i + 1;
-                        if (arr.some(y => y.points === x.points))
-                            x.rank = arr.find(y => y.points === x.points).rank;
+                        const draw = arr.find(y => y.points === x.points);
+                        if (draw) x.rank = draw.rank;
                         console.log(`${x.rank}. ${x.team} ${x.points}`);
                     });
                 }

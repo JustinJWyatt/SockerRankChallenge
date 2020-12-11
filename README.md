@@ -15,7 +15,7 @@ This repo solves the challenge of scoring soccer matches and ranking. There is o
 ### Getting Started
 1. Clone the repo
 ```sh
-git clone https://https://github.com/JustinJWyatt/SockerRankChallenge
+git clone https://github.com/JustinJWyatt/SockerRankChallenge
 ```
 2. run `npm install`
 
